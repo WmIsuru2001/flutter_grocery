@@ -13,13 +13,13 @@ class SearchBox extends StatelessWidget {
             color: const Color(0xffd9d9d9).withOpacity(0.54),
             borderRadius: BorderRadius.circular(100),
             border: Border.all(
-              color: const Color(0xff000000).withOpacity(0.2),
+              color: const Color(0xff000000).withOpacity(0.21),
               width: 2,
             )),
         child: Row(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 11),
               child: Icon(
                 Icons.search,
                 size: 30,
