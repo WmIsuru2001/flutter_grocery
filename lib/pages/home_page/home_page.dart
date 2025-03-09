@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_grocery/pages/home_page/widgets/search_bar.dart';
 import 'package:flutter_grocery/widgets/app_bar/app_bar.dart';
 import 'package:flutter_grocery/widgets/reusable/product_card.dart';
+import 'package:flutter_grocery/widgets/reusable/product_price_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -82,6 +83,20 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                "For Sale and Low Cost",
+                style: TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              ProductPriceCard(),
             ],
           ),
         ),
