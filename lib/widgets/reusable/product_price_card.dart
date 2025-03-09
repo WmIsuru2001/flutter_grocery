@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 
 class ProductPriceCard extends StatelessWidget {
-  const ProductPriceCard({super.key});
+  final String title;
+  final String pm;
+  final String price;
+
+  const ProductPriceCard({
+    super.key,
+    required this.title,
+    required this.pm,
+    required this.price,
+  });
 
   final double cardwidth = 180;
   final double cardheight = 200;
@@ -17,35 +26,69 @@ class ProductPriceCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              width: 150,
+              width: 165,
               height: 90,
               decoration: BoxDecoration(
                 color: const Color(0xff06FFA5),
                 borderRadius: BorderRadius.circular(12),
               ),
             ),
-            const Text("title"),
+            const SizedBox(
+              height: 5,
+            ),
+            Text(
+              title,
+              style: const TextStyle(
+                  fontSize: 20,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w500),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Column(
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("200m1"),
-                    Text("200"),
+                    Text(
+                      pm,
+                      style: const TextStyle(
+                        fontSize: 13,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    Text(
+                      price,
+                      style: const TextStyle(
+                        fontSize: 20,
+                        color: Color(0xffFFE500),
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
                   ],
                 ),
                 Container(
-                  width: 30,
-                  height: 30,
+                  width: 50,
+                  height: 50,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(100),
                     border: Border.all(
                       color: Colors.white,
+                      width: 3,
                     ),
                   ),
-                  child: const Icon(
-                    Icons.plus_one,
+                  child: const Center(
+                    child: Icon(
+                      Icons.add,
+                      color: Colors.white,
+                      size: 30,
+                    ),
                   ),
                 ),
               ],

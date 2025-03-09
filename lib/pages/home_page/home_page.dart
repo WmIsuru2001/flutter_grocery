@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
               Text(
                 "Explore Categories",
                 style: TextStyle(
-                  fontSize: 17,
+                  fontSize: 19,
                   fontWeight: FontWeight.w700,
                 ),
               ),
@@ -89,14 +89,28 @@ class HomePage extends StatelessWidget {
               Text(
                 "For Sale and Low Cost",
                 style: TextStyle(
-                  fontSize: 17,
+                  fontSize: 19,
                   fontWeight: FontWeight.w700,
                 ),
               ),
               SizedBox(
                 height: 10,
               ),
-              ProductPriceCard(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  ProductPriceCard(
+                    title: "Washing Liquid",
+                    pm: "200 ml",
+                    price: "230\$",
+                  ),
+                  ProductPriceCard(
+                    title: "Coffee and Tea",
+                    pm: "100g",
+                    price: "30\$",
+                  ),
+                ],
+              ),
             ],
           ),
         ),
