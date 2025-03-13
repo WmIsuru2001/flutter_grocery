@@ -6,16 +6,22 @@ class CategoryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-      leading: const Icon(Icons.arrow_back),
-      title: const Text(
-        "Categories",
-        style: TextStyle(
-          fontSize: 22,
-          fontWeight: FontWeight.w500,
+      appBar: AppBar(
+        leading: const Icon(Icons.arrow_back),
+        title: const Text(
+          "Categories",
+          style: TextStyle(
+            fontSize: 22,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        centerTitle: true,
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [Container()],
         ),
       ),
-      centerTitle: true,
-    ));
+    );
   }
 }
