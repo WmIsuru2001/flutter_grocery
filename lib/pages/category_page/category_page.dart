@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_grocery/widgets/shared/noticfication_card.dart';
 
 class CategoryPage extends StatelessWidget {
   const CategoryPage({super.key});
@@ -17,9 +18,14 @@ class CategoryPage extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [Container()],
+      body: const SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 10.0),
+          child: Column(
+            children: [
+              NoticficationCard(),
+            ],
+          ),
         ),
       ),
     );
